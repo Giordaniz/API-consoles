@@ -60,9 +60,9 @@ insert_spec = {
 update_spec = {
     "parameters": [
         {
-            "name": "cansole_id",
+            "name": "console_id",
             "in": "path",
-            "type": "intereger",
+            "type": "integer",
             "required": True,
             "description": "ID do Console"
         },

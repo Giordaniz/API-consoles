@@ -25,7 +25,7 @@ class ConsoleModel:
 def insert(dados):
     conn = get_connection()
     cursor = conn.cursor()
-    sql = "INSERT INTO noticias (nome, ano, empresa, historia) VALUES (%s, %s, %s, %s)"
+    sql = "INSERT INTO consoles (nome, ano, empresa, historia) VALUES (%s, %s, %s, %s)"
     valores = (dados.get('nome'), dados.get('ano'), dados.get('empresa'), dados.get('historia'))
     cursor.execute(sql, valores)
     conn.commit()
@@ -38,7 +38,7 @@ def insert(dados):
 def update(console_id, dados):
     conn = get_connection()
     cursor = conn.cursor()
-    sql = "UPDATE consoles set nome=%s, ano=%s, empresa%s, historia=%s WHERE id=%s"
+    sql = "UPDATE consoles set nome=%s, ano=%s, empresa=%s, historia=%s WHERE id=%s"
     valores = (dados.get('nome'), dados.get('ano'), dados.get('historia'), console_id)
     cursor.execute(sql, valores)
     conn.commit()
